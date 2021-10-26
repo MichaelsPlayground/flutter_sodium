@@ -110,33 +110,7 @@ Future<List<Topic>> buildToc(BuildContext context) async {
           Sample('xchachaietf1', func: samples.xchachaietf1),
           Sample('xchachaietf2', func: samples.xchachaietf2)
         ]),
-    Section('Public-key cryptography'),
-    Topic('Authenticated encryption',
-        description: 'Public-key authenticated encryption',
-        url:
-            'https://libsodium.gitbook.io/doc/public-key_cryptography/authenticated_encryption',
-        samples: <Sample>[
-          Sample('box1', func: samples.box1),
-          Sample('box2', func: samples.box2),
-          Sample('box3', func: samples.box3),
-          Sample('box4', func: samples.box4)
-        ]),
-    Topic('Public-key signatures',
-        description:
-            'Computes a signature for a message using a secret key, and provides verification using a public key.',
-        url:
-            'https://libsodium.gitbook.io/doc/public-key_cryptography/public-key_signatures',
-        samples: <Sample>[
-          Sample('sign1', func: samples.sign1),
-          Sample('sign2', func: samples.sign2),
-          Sample('sign3', funcAsync: samples.sign3),
-          Sample('sign4', func: samples.sign4)
-        ]),
-    Topic('Sealed boxes',
-        description:
-            'Anonymously send encrypted messages to a recipient given its public key.',
-        url: 'https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes',
-        samples: <Sample>[Sample('box5', func: samples.box5)]),
+
     Section('Hashing'),
     Topic('Generic hashing',
         description:
@@ -197,7 +171,35 @@ Future<List<Topic>> buildToc(BuildContext context) async {
         description:
             'Ed25519 keys can be converted to X25519 keys, so that the same key pair can be used both for authenticated encryption (crypto_box) and for signatures (crypto_sign).',
         url: 'https://download.libsodium.org/doc/advanced/ed25519-curve25519',
-        samples: <Sample>[Sample('sign5', func: samples.sign5)])
+        samples: <Sample>[Sample('sign5', func: samples.sign5)]),
+
+    Section('Public-key cryptography'),
+    Topic('Authenticated encryption',
+        description: 'Public-key authenticated encryption',
+        url:
+        'https://libsodium.gitbook.io/doc/public-key_cryptography/authenticated_encryption',
+        samples: <Sample>[
+          Sample('box1', func: samples.box1),
+          Sample('box2', func: samples.box2),
+          Sample('box3', func: samples.box3),
+          Sample('box4', func: samples.box4)
+        ]),
+    Topic('Public-key signatures',
+        description:
+        'Computes a signature for a message using a secret key, and provides verification using a public key.',
+        url:
+        'https://libsodium.gitbook.io/doc/public-key_cryptography/public-key_signatures',
+        samples: <Sample>[
+          Sample('sign1', func: samples.sign1),
+          Sample('sign2', func: samples.sign2),
+          Sample('sign3', funcAsync: samples.sign3),
+          Sample('sign4', func: samples.sign4)
+        ]),
+    Topic('Sealed boxes',
+        description:
+        'Anonymously send encrypted messages to a recipient given its public key.',
+        url: 'https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes',
+        samples: <Sample>[Sample('box5', func: samples.box5)]),
   ];
 
   // load asset samples.dart for code snippets
